@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=DWM
+Comment=Dynamic Window Manager by suckless.org
+Exec=/usr/local/bin/dwm
+Terminal=false
+TryExec=/usr/local/bin/dwm
+Type=Application
+
+[X-window Manager]
+SessionManaged=true 
