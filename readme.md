@@ -22,7 +22,7 @@ No useless feature. No useless bloat.
 ---
 ![figlet](media/figlet.png)
 ---
-![mycomputer](media/mycomputer.png)
+![mycomputer](media/mycomputer.jpeg)
 
 This is reason for my hostname. its accurate. dont laugh!
 
