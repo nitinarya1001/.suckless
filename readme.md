@@ -8,7 +8,7 @@ No useless feature. No useless bloat.
 
 ---
 
-### Patches I used for the for teh software:
+### Patches I used for the for the software:
 1. DWM (Dynamic Window Manager) : vanity_gaps and always_center. both for aesthetic reasons; I didn't need anything else for now
 2. ST (Simple terminal) : alpha_focus and scroll_back
 3. SLSTATUS: none
