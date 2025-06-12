@@ -21,6 +21,11 @@ No useless feature. No useless bloat.
 ![tiling](media/tiling.png)
 ---
 ![figlet](media/figlet.png)
+---
+![mycomputer](media/mycomputer.png)
 
+This is reason for my hostname. its accurate. dont laugh!
+
+---
 My build is green themed but its not hard to modify. I suggest deleting the config.h and modify the config.def.h and then running the "sudo make clean install" command.
 
