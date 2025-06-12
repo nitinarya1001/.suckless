@@ -15,7 +15,12 @@ No useless feature. No useless bloat.
 4. SLOCK: none
 5. DMENU: I use this by installing from pacman as it doesn't need much modifications and colors can be changed trhou DWM itself.
 
+---	
+![Backround](background.png)
 ---
+![tiling](tiling.png)
+---
+![figlet](figlet.png)
 
 My build is green themed but its not hard to modify. I suggest deleting the config.h and modify the config.def.h and then running the "sudo make clean install" command.
 

@@ -90,8 +90,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]     = { "brave", NULL};
 static const char *filemanagercmd[] = { "thunar", NULL};
 static const char *rockercmd[]      = { "st","alsamixer"};
-static const char *btcmd[]          = { "blueman-manager", NULL};
 static const char *lockcmd[]        = { "slock", NULL};
+static const char *btcmd[]          = { "blueman-manager", NULL};
+static const char *sscmd[]          = { "shotgun", "-f", "png", NULL};
 static const char *upvol[]          = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
 static const char *downvol[]        = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
 static const char *mutevol[]        = { "/usr/bin/amixer", "set", "Master", "toggle",NULL };
@@ -153,13 +154,14 @@ static const Key keys[] = {
 	  TAGKEYS(                      XK_8,                      7)
 	  TAGKEYS(                      XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY,                       XK_Delete, spawn, 	   {.v = downvol } },
-	{ MODKEY,                       XK_End,    spawn, 	   {.v = mutevol } },
-	{ MODKEY,                       XK_Insert, spawn, 	   {.v = upvol   } },
+	{ MODKEY,                       XK_Delete, spawn, 	       {.v = downvol } },
+	{ MODKEY,                       XK_End,    spawn, 	       {.v = mutevol } },
+	{ MODKEY,                       XK_Insert, spawn, 	       {.v = upvol   } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = rockercmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = btcmd } },
+	{ MODKEY|ShiftMask,              XK_s,      spawn,          {.v = sscmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
 };
 
