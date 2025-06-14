@@ -35,6 +35,7 @@ static const Rule rules[] = {
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Gimp"           ,NULL,      	NULL,       0,            1,           -1 },
 	{ "ffplay"         ,NULL,       NULL,       0,            1,           -1 },
+	{ "copyq"          ,NULL,       NULL,       0,            1,           -1 },
 	{ "Blueman-manager",NULL,       NULL,       0,            1,           -1 },
 	{ "pavucontrol"    ,NULL,       NULL,       0,            1,           -1 },
 	{ "Thunar"         ,NULL,       NULL,       0,            1,           -1 },
@@ -89,6 +90,7 @@ static const char *termcmd[]  = { "st", NULL };
 /* custom commands */
 static const char *browsercmd[]     = { "brave", NULL};
 static const char *filemanagercmd[] = { "thunar", NULL};
+static const char *clipboardcmd[]   = { "copyq","show", NULL};
 static const char *rockercmd[]      = { "st","alsamixer"};
 static const char *lockcmd[]        = { "slock", NULL};
 static const char *btcmd[]          = { "blueman-manager", NULL};
@@ -161,7 +163,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = rockercmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = btcmd } },
-	{ MODKEY|ShiftMask,              XK_s,      spawn,          {.v = sscmd } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = sscmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = clipboardcmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
 };
 
