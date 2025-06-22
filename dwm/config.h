@@ -33,12 +33,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor */
-	{ "Gimp"           ,NULL,      	NULL,       0,            1,           -1 },
+//	{ "Gimp"           ,NULL,      	NULL,       0,            1,           -1 },
 	{ "ffplay"         ,NULL,       NULL,       0,            1,           -1 },
 	{ "copyq"          ,NULL,       NULL,       0,            1,           -1 },
 	{ "Blueman-manager",NULL,       NULL,       0,            1,           -1 },
 	{ "pavucontrol"    ,NULL,       NULL,       0,            1,           -1 },
-	{ "Thunar"         ,NULL,       NULL,       0,            1,           -1 },
+//	{ "Thunar"         ,NULL,       NULL,       0,            1,           -1 },
 	{ "Lxappearance"   ,NULL,       NULL,       0,            1,           -1 },
 	{ "Timeshift-gtk"  ,"timeshift-gtk","Timeshift-gtk",0    ,1,           -1 },
 };
@@ -91,10 +91,11 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]     = { "brave", NULL};
 static const char *filemanagercmd[] = { "thunar", NULL};
 static const char *clipboardcmd[]   = { "clipmenu", "-i", "-fn", dmenufont, "-nb", col_gray1 , "-nf", col_gray3, "-sb", col_green, "-sf", col_gray4 , NULL};
-static const char *rockercmd[]      = { "st","alsamixer"};
+static const char *rockercmd[]      = { "st","alsamixer", NULL};
 static const char *lockcmd[]        = { "slock", NULL};
+static const char *vscodecmd[]      = { "code", NULL};
 static const char *btcmd[]          = { "blueman-manager", NULL};
-static const char *sscmd[]          = { "shotgun", "-f", "png", NULL};
+static const char *sscmd[]          = { "flameshot", "gui", NULL};
 static const char *upvol[]          = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
 static const char *downvol[]        = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
 static const char *mutevol[]        = { "/usr/bin/amixer", "set", "Master", "toggle",NULL };
@@ -116,7 +117,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
-	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
+//	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY|Mod1Mask,              XK_u,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_u,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_i,      incrigaps,      {.i = +1 } },
@@ -164,6 +165,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = rockercmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = btcmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = sscmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = vscodecmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = clipboardcmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
 };
