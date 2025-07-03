@@ -38,6 +38,7 @@ static const Rule rules[] = {
 	{ "copyq"          ,NULL,       NULL,       0,            1,           -1 },
 	{ "Blueman-manager",NULL,       NULL,       0,            1,           -1 },
 	{ "pavucontrol"    ,NULL,       NULL,       0,            1,           -1 },
+	{ "transmission"   ,NULL,       NULL,       0,            1,           -1 },
 //	{ "Thunar"         ,NULL,       NULL,       0,            1,           -1 },
 	{ "Lxappearance"   ,NULL,       NULL,       0,            1,           -1 },
 	{ "Timeshift-gtk"  ,"timeshift-gtk","Timeshift-gtk",0    ,1,           -1 },
