@@ -39,6 +39,10 @@ static const Rule rules[] = {
 	{ "Blueman-manager",NULL,       NULL,       0,            1,           -1 },
 	{ "pavucontrol"    ,NULL,       NULL,       0,            1,           -1 },
 	{ "transmission"   ,NULL,       NULL,       0,            1,           -1 },
+	{ "Volume"         ,NULL,       NULL,       0,            1,           -1 },
+	{ "Bluetooth"      ,NULL,       NULL,       0,            1,           -1 },
+	{ "Brave-browser"  ,NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Music"          ,NULL,       NULL,       1 << 8,       0,           -1 },
 //	{ "Thunar"         ,NULL,       NULL,       0,            1,           -1 },
 	{ "Lxappearance"   ,NULL,       NULL,       0,            1,           -1 },
 	{ "Timeshift-gtk"  ,"timeshift-gtk","Timeshift-gtk",0    ,1,           -1 },
@@ -92,10 +96,12 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]     = { "brave", NULL};
 static const char *filemanagercmd[] = { "thunar", NULL};
 static const char *clipboardcmd[]   = { "clipmenu", "-i", "-fn", dmenufont, "-nb", col_gray1 , "-nf", col_gray3, "-sb", col_green, "-sf", col_gray4 , NULL};
-static const char *rockercmd[]      = { "st","alsamixer", NULL};
+static const char *rockercmd[]      = { "st", "-c", "Volume", "alsamixer", NULL};
 static const char *lockcmd[]        = { "slock", NULL};
 static const char *vscodecmd[]      = { "code", NULL};
-static const char *btcmd[]          = { "blueman-manager", NULL};
+static const char *btcmd[]          = { "st", "-c", "Bluetooth", "bluetoothctl", NULL};
+static const char *camcmd[]         = { "ffplay", "-window_title", "Webcam", "/dev/video0", NULL};
+static const char *musiccmd[]       = { "st", "-c", "Music", "mpv","--no-video", "https://www.youtube.com/watch?v=jfKfPfyJRdk", NULL};
 static const char *sscmd[]          = { "flameshot", "gui", NULL};
 static const char *upvol[]          = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
 static const char *downvol[]        = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
@@ -165,7 +171,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = rockercmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = btcmd } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = camcmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = sscmd } },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = musiccmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = vscodecmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = clipboardcmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
