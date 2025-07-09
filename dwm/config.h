@@ -11,7 +11,7 @@ static const unsigned int gappov    = 0;       /* vert outer gap between windows
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FiraCode-Regular:size=12" };
+static const char *fonts[]          = { "FiraCode-Regular:size=12", "SymbolsNerdFont-Regular:size=12" };
 static const char dmenufont[]       = "FiraCode-Regular:size=14";
 static const char col_gray1[]       = "#111111";
 static const char col_gray2[]       = "#555555";
@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	{ "Volume"         ,NULL,       NULL,       0,            1,           -1 },
 	{ "Bluetooth"      ,NULL,       NULL,       0,            1,           -1 },
 	{ "Brave-browser"  ,NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Google-chrome"  ,NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "Code"           ,NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Music"          ,NULL,       NULL,       1 << 8,       0,           -1 },
 //	{ "Thunar"         ,NULL,       NULL,       0,            1,           -1 },
