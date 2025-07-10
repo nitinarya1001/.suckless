@@ -41,6 +41,7 @@ static const Rule rules[] = {
 	{ "transmission"   ,NULL,       NULL,       0,            1,           -1 },
 	{ "Volume"         ,NULL,       NULL,       0,            1,           -1 },
 	{ "Bluetooth"      ,NULL,       NULL,       0,            1,           -1 },
+	{ "Power"          ,NULL,       NULL,       0,            1,           -1 },
 	{ "Brave-browser"  ,NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Google-chrome"  ,NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "Code"           ,NULL,       NULL,       1 << 2,       0,           -1 },
@@ -103,6 +104,7 @@ static const char *lockcmd[]        = { "slock", NULL};
 static const char *vscodecmd[]      = { "code", NULL};
 static const char *btcmd[]          = { "st", "-c", "Bluetooth", "bluetoothctl", NULL};
 static const char *camcmd[]         = { "ffplay", "-window_title", "Webcam", "/dev/video0", NULL};
+static const char *powercmd[]       = { "st", "-c", "Power", "bash","/home/nitin-arya/.scripts/on_and_off.sh", NULL};
 static const char *musiccmd[]       = { "st", "-c", "Music", "mpv","--no-video", "https://www.youtube.com/watch?v=jfKfPfyJRdk", NULL};
 static const char *sscmd[]          = { "flameshot", "gui", NULL};
 static const char *upvol[]          = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
@@ -179,6 +181,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = vscodecmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = clipboardcmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
+	{ Mod1Mask,                     XK_F4,     spawn,          {.v = powercmd } },
 };
 
 /* button definitions */
