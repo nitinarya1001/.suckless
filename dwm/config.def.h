@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "󰖟", "", "4", "5", "6", "7", "", "" };
+static const char *tags[] = { "", "󰖟", "", "4", "5", "6", "7", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -44,9 +44,9 @@ static const Rule rules[] = {
 	{ "Power"          ,NULL,       NULL,       0,            1,           -1 },
 	{ "Brave-browser"  ,NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Google-chrome"  ,NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "Code"           ,NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Code"           ,NULL,       NULL,       1,            0,           -1 },
 	{ "Music"          ,NULL,       NULL,       1 << 8,       0,           -1 },
-//	{ "Thunar"         ,NULL,       NULL,       0,            1,           -1 },
+	{ "Thunar"         ,NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "Lxappearance"   ,NULL,       NULL,       0,            1,           -1 },
 	{ "Timeshift-gtk"  ,"timeshift-gtk","Timeshift-gtk",0    ,1,           -1 },
 };
