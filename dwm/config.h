@@ -2,12 +2,12 @@
 
 /* appearance */
 
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 0;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 0;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 0;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 0;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 0;        /* horiz inner gap between windows */
+static const unsigned int gappiv    = 0;        /* vert inner gap between windows */
+static const unsigned int gappoh    = 0;        /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 0;        /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
@@ -20,8 +20,8 @@ static const char col_gray4[]       = "#ffffff";
 static const char col_green[]       = "#186e0b";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_green,  col_green  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2  },
+	[SchemeSel]  = { col_gray4, col_green, col_green  },
 };
 
 /* tagging */
@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	{ "Volume"         ,NULL,       NULL,       0,            1,           -1 },
 	{ "Bluetooth"      ,NULL,       NULL,       0,            1,           -1 },
 	{ "Power"          ,NULL,       NULL,       0,            1,           -1 },
+	{ "vlc"            ,NULL,       NULL,       0,            1,           -1 },
 	{ "Brave-browser"  ,NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Google-chrome"  ,NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "Code"           ,NULL,       NULL,       1,            0,           -1 },
@@ -107,9 +108,9 @@ static const char *camcmd[]         = { "ffplay", "-window_title", "Webcam", "/d
 static const char *powercmd[]       = { "st", "-c", "Power", "bash","/home/nitin-arya/.scripts/on_and_off.sh", NULL};
 static const char *musiccmd[]       = { "st", "-c", "Music", "mpv","--no-video", "https://www.youtube.com/watch?v=jfKfPfyJRdk", NULL};
 static const char *sscmd[]          = { "flameshot", "gui", NULL};
-static const char *upvol[]          = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
-static const char *downvol[]        = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
-static const char *mutevol[]        = { "/usr/bin/amixer", "set", "Master", "toggle",NULL };
+static const char *upvol[]          = { "/usr/bin/amixer",  "set", "Master", "5%+",   NULL };
+static const char *downvol[]        = { "/usr/bin/amixer",  "set", "Master", "5%-",   NULL };
+static const char *mutevol[]        = { "/usr/bin/amixer",  "set", "Master", "toggle",NULL };
 
 //static const char *brightup[]    = { "brightnessctl", "set", "5+%",NULL };
 //static const char *brightdown[]  = { "brightnessctl", "set", "5-%",NULL };
