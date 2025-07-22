@@ -98,6 +98,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 /* custom commands */
 static const char *browsercmd[]     = { "brave", NULL};
+static const char *chromecmd[]      = { "google-chrome-stable", NULL};
 static const char *filemanagercmd[] = { "thunar", NULL};
 static const char *clipboardcmd[]   = { "clipmenu", "-i", "-fn", dmenufont, "-nb", col_gray1 , "-nf", col_gray3, "-sb", col_green, "-sf", col_gray4 , NULL};
 static const char *rockercmd[]      = { "st", "-c", "Volume", "alsamixer", NULL};
@@ -173,6 +174,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_End,    spawn, 	       {.v = mutevol } },
 	{ MODKEY,                       XK_Insert, spawn, 	       {.v = upvol   } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
+	{ MODKEY,                       XK_g,      spawn,          {.v = chromecmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = rockercmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = btcmd } },
