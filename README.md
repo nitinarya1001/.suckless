@@ -1,3 +1,5 @@
+This repo is now unmaintaned, but the code still works. Updated suckless software is in [dotfiles repo](https://github.com/nitinarya1001/dotfiles)
+
 # My Suckless software for Arch linux (X11)
 
 ---
